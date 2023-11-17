@@ -12,8 +12,27 @@
 method Abs(x: int) returns (y: int)
   ensures 0 <= y
 {
-if x<0
-{ return - x; }
-else
-{ return x; }
+  if x<0
+    { return - x; }
+  else
+    { return x; }
+
+}
+
+/*
+  Functions are also available and can be used in annotations. Note that names are case
+  sensitive, so Abs (method) and abs (function) are different items.
+ */
+
+function abs(x: int): int
+{
+  if x < 0 then -x else x
+}
+
+/*
+  Write a max function.
+ */
+function max(x: int, y: int): int
+{
+  0  // replace 0 with an expression to find max value of x, y
 }
