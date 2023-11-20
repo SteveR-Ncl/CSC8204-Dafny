@@ -30,14 +30,6 @@ function abs(x: int): int
 }
 
 /*
-  Write a max function.
- */
-function max(x: int, y: int): int
-{
-  0  // replace 0 with an expression to find max value of x, y
-}
-
-/*
   A method in Dafny can return more than one variable. The example below
   returns two integer variables. There are 2 postconditions - but are they proven?
  */
