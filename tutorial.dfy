@@ -50,3 +50,10 @@ method Max(a: int, b: int) returns (c: int)
   { return b;}
 
 }
+
+method m()
+{
+  var x, y, z: bool := 1, 2, true;
+
+  assert x <= y;
+}
