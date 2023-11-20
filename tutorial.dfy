@@ -10,7 +10,9 @@
  */
 
 method Abs(x: int) returns (y: int)
-  ensures 0 <= y  // changed this back to allow the code to be proven
+  ensures 0 <= y  // changed this back to allow the code to be proven. Additional postconditions
+                  // relate to exercise 5 of tutorial
+  ensures (y == x) || (y == -x)
 {
   if x<0
     { return - x; }
@@ -56,4 +58,11 @@ method m()
   var x, y, z: bool := 1, 2, true;
 
   assert x <= y;
+}
+
+method TestAbs()
+{
+  var v := Abs(-9);
+  assert 0 <= v;
+  assert v == 9;
 }
