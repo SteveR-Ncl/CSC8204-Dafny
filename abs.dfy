@@ -10,7 +10,7 @@
  */
 
 method Abs(x: int) returns (y: int)
-  ensures 0 <= y
+  ensures 0 <= x  // change this back to allow the code to be proven
 {
   if x<0
     { return - x; }
@@ -34,17 +34,17 @@ function abs(x: int): int
  */
 function max(x: int, y: int): int
 {
-  0  // replace 0 with an expression to find max value of x, y
+  if x > y then x else y  
 }
 
 /*
   A method in Dafny can return more than one variable. The example below
   returns two integer variables. There are 2 postconditions - but are they proven?
  */
-method MultipleReturns(x: int, y: int) returns (more: int, less: int)
-  ensures less < x
-  ensures x < more
+method MultipleReturns(x: int, y: int) returns (sum: int, diff: int)
+  requires 0 < y
+  ensures diff < x < sum
 {
-  more := x + y;
-  less := x - y;
+  sum := x + y;
+  diff := x - y;
 }
