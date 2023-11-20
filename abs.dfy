@@ -10,7 +10,7 @@
  */
 
 method Abs(x: int) returns (y: int)
-  ensures 0 <= x  // change this back to allow the code to be proven
+  ensures 0 <= y  // changed this back to allow the code to be proven
 {
   if x<0
     { return - x; }
@@ -39,4 +39,14 @@ method MultipleReturns(x: int, y: int) returns (sum: int, diff: int)
 {
   sum := x + y;
   diff := x - y;
+}
+
+method Max(a: int, b: int) returns (c: int)
+  ensures c >= a && c >= b
+{
+  if a > b
+  { return a; }
+  else
+  { return b;}
+
 }
