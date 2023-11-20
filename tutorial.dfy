@@ -47,3 +47,9 @@ method Max(a: int, b: int) returns (c: int)
 {
    c := 0; // replace this line with code
 }
+
+method TestAbs()
+{
+  var v := Abs(-3);
+  assert 0 <= v;
+}
