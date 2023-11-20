@@ -40,3 +40,10 @@ method MultipleReturns(x: int, y: int) returns (more: int, less: int)
   more := x + y;
   less := x - y;
 }
+
+method Max(a: int, b: int) returns (c: int)
+  // What postcondition should go here, so that the method operates as expected?
+  // (There are many ways to write this).
+{
+   c := 0; // replace this line with code
+}
