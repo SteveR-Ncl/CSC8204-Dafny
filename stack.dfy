@@ -36,7 +36,7 @@ requires !isEmpty(s)
    s[|s|-1] 
 }
 
-method testStack(n: nat)
+method testStack()
 {
   var s: intStack := [20, 30, 15, 40, 60, 100, 80];
 
