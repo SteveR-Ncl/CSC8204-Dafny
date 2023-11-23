@@ -7,9 +7,8 @@
   This is the full version of the file from the 'solutions' branch.
   
 */
-const stackMax := 40
 
-type intStack = s: seq<int> | |s| <= stackMax
+type intStack = seq<int> 
 
 predicate isEmpty(s: intStack)
 {
@@ -17,7 +16,6 @@ predicate isEmpty(s: intStack)
 }
 
 function push(s: intStack, x: int): intStack
-requires |s| < stackMax
 ensures |push(s,x)| == |s| + 1
 {
     s + [x]
