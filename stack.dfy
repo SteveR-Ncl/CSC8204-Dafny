@@ -1,9 +1,10 @@
 /* 
-  Simple integer stack
+  Dafny Tutorial 2: Sequences and Stacks, Predicates and Assertions
 
-  Sequences are unbound datatypes, stack can be 
-  modelled as a specialised sequence with a maximum 
-  size.
+  In this tutorial we introduce a simple stack model using the functional 
+  style of programming.
+
+  This is the full version of the file from the 'solutions' branch.
   
 */
 const stackMax := 40
