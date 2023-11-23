@@ -23,9 +23,7 @@ requires !isEmpty(s)
    s[..|s|-1] 
 }
 
-function top(s: intStack): int
-
-method testStack()
+method testStack() returns (r: intStack)
 {
   var s: intStack := [20, 30, 15, 40, 60, 100, 80];
 
@@ -35,10 +33,11 @@ method testStack()
   assert exists e: int :: 0 <= e < |s| && s[e] > 70;
   assert forall e: int :: 0 <= e < |s| ==> s[e] > 5;
 
-
+  r:= s;
 }
 
-method main()
+method Main()
 {
-    testStack();
+    var t:=testStack();
+    print "Stack tested\nStack is ", t, "\n";
 }
