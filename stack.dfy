@@ -43,6 +43,8 @@ method testStack()
   assert pop(push(s,100)) == s;
   assert push(pop(s),top(s)) == s;
 
+  assert forall st: intStack, x: int :: pop(push(st,x)) == st;
+
   assert exists e: int :: 0 <= e < |s| && s[e] > 70;
   assert forall e: int :: 0 <= e < |s| ==> s[e] > 5;
 
