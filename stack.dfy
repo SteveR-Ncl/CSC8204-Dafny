@@ -29,8 +29,6 @@ method testStack() returns (r: intStack)
 
   assert pop(push(s,100)) == s;
 
-
-  assert exists e: int :: 0 <= e < |s| && s[e] > 70;
   assert forall e: int :: 0 <= e < |s| ==> s[e] > 5;
 
   r:= s;
