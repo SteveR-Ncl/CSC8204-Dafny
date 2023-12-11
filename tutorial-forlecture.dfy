@@ -23,13 +23,48 @@ class sorting
   function sort(s1: seq<int>): seq<int>
   ensures sorted(sort(s1)) &&
     forall x:int :: x in s1 ==> x in sort(s1)
- 
+}
 
+
+
+
+method Divide(m: int, n: int) returns (q: int, r : int)
+requires ((m >= 0) && (n > 0))
+ensures ((m == q * n + r) && (r < n) && (r >= 0))
+{
+  q := 0;
+	r := m;
+	while r >= n 
+    {
+        q:= q + 1;
+        r:= r - n;
+    }
+	
 
 }
 
 
 
+
+
+
+ //       invariant (m == q * n + r) && (r >= 0)
+  
+
+
+
+
+
+
+
+class myClass
+{ 
+  var field1: int
+  var field2: int
+
+  function f(a: int): int
+  ensures f(a) > field1
+}
 
 
 
